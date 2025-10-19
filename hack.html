@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathons | Jothi Prakasam</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Hackathons Section */
+      .hackathons {
+        padding: 3rem 1rem;
+      }
+
+      .hackathon-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 900px;
+        margin: auto;
+      }
+
+      .hackathon-card {
+        display: flex;
+        gap: 1.5rem;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(8px);
+        border-radius: 20px;
+        padding: 1.7rem 1.2rem;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+        align-items: flex-start;
+        transition: transform 0.3s ease, background 0.3s;
+        animation: fadeUp 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
+      }
+
+      .hackathon-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        background: rgba(255, 255, 255, 0.18);
+      }
+
+      /* --- UPDATED: Increased image size to medium --- */
+      .hackathon-img {
+        width: 220px; /* Increased from 140px */
+        height: 150px; /* Increased from 100px */
+        border-radius: 12px;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      .hackathon-content {
+        flex: 1;
+      }
+
+      .hackathon-name {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: 0 0 0.5rem;
+        color: #4aa3ff;
+      }
+
+      .venue,
+      .prize,
+      .description {
+        margin: 0.3rem 0;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .prize {
+        font-weight: bold;
+        color: #3498db;
+      }
+
+      /* Responsive */
+      @media (max-width: 700px) {
+        .hackathon-card {
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+        }
+        /* --- UPDATED: Adjusted mobile image size (now using a max-width for better proportion) --- */
+        .hackathon-img {
+          width: 100%;
+          max-width: 300px; /* Added max-width to prevent it from getting too big on mobile */
+          height: 180px;
+        }
+      }
+
+      /* Reuse fadeUp animation from main CSS */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">Jothi's Achievements</div>
+      <ul class="nav-links">
+        <li><a href="main.html" target="_blank">Home</a></li>
+        <li>
+          <a href="https://github.com/jothiprakasam" target="_blank"
+            >My Projects</a
+          >
+        </li>
+        <li><a href="hack.html">Hackathons</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hackathons Section -->
+    <section class="hackathons">
+      <h2 class="section-title">🏆 Hackathons</h2>
+
+      <div class="hackathon-container">
+        <!-- Hackathon 1 -->
+        <div class="hackathon-card">
+          <img
+            src="images/rv-univ.jpeg"
+            alt="Hackathon 1"
+            class="hackathon-img"
+          />
+          <div class="hackathon-content">
+            <h3 class="hackathon-name">Agronyx 2025</h3>
+            <p class="venue">
+              <strong>Venue:</strong> RV University - Bangalore
+            </p>
+            <p class="prize"><strong>Prize:</strong> 🥇 2nd Place - ₹10,000</p>
+            <p class="description">
+              Built an AI-powered DevOps tool to monitor the OS(windows+linux)
+              and VMs at scale. Our tool uses Peer-to-Peer node communication
+              for scale across VM.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hackathon 2 -->
+        <div class="hackathon-card">
+          <img
+            src="images/kerala.JPG"
+            alt="Hackathon 2"
+            class="hackathon-img"
+          />
+          <div class="hackathon-content">
+            <h3 class="hackathon-name">HackAtArch 2.0</h3>
+            <p class="venue">
+              <strong>Venue:</strong> Goverment engineering college - kerala
+            </p>
+            <p class="prize"><strong>Prize:</strong> 🥈 1st Place - ₹25,000</p>
+            <p class="description">
+              Developed a startup idea and built a prototype, pitched infront of
+              judges with proper business model, revenue forecasting.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hackathon 3 -->
+        <div class="hackathon-card">
+          <img
+            src="images/vit-track.jpeg"
+            alt="Hackathon 3"
+            class="hackathon-img"
+          />
+          <div class="hackathon-content">
+            <h3 class="hackathon-name">DevHouse</h3>
+            <p class="venue">
+              <strong>Venue:</strong> Vellore Insitute of Technology - Chennai
+            </p>
+            <p class="prize"><strong>Prize:</strong> Track winner - Orkes</p>
+            <p class="description">
+              Built a blockchain application for software package management and
+              it uses the Orkes conductor workflow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

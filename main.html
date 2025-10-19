@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jothi Prakasam Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+<style>
+        .hackathons {
+        padding: 3rem 1rem;
+      }
+
+      .hackathon-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 900px;
+        margin: auto;
+      }
+
+      .hackathon-card {
+        display: flex;
+        gap: 1.5rem;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(8px);
+        border-radius: 20px;
+        padding: 1.7rem 1.2rem;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+        align-items: flex-start;
+        transition: transform 0.3s ease, background 0.3s;
+        animation: fadeUp 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
+      }
+
+      .hackathon-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        background: rgba(255, 255, 255, 0.18);
+      }
+
+      /* --- UPDATED: Increased image size to medium --- */
+      .hackathon-img {
+        width: 220px; /* Increased from 140px */
+        height: 150px; /* Increased from 100px */
+        border-radius: 12px;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      .hackathon-content {
+        flex: 1;
+      }
+
+      .hackathon-name {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: 0 0 0.5rem;
+        color: #4aa3ff;
+      }
+
+      .venue,
+      .prize,
+      .description {
+        margin: 0.3rem 0;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .prize {
+        font-weight: bold;
+        color: #3498db;
+      }
+
+      /* Responsive */
+      @media (max-width: 700px) {
+        .hackathon-card {
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+        }
+        /* --- UPDATED: Adjusted mobile image size (now using a max-width for better proportion) --- */
+        .hackathon-img {
+          width: 100%;
+          max-width: 300px; /* Added max-width to prevent it from getting too big on mobile */
+          height: 180px;
+        }
+      }
+
+      /* Reuse fadeUp animation from main CSS */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+</style>
+  </head>
+  <body class="dark-mode">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">Welcome</div>
+      <ul class="nav-links">
+        <li>
+          <a href="https://github.com/jothiprakasam" target="_blank"
+            >My Projects</a
+          >
+        </li>
+        <li><a href="hack.html" >My Achievements</a></li>
+        <li><a href="#blogs" >Blogs</a></li>
+        <li><a href="contact.html" >Contact Me</a></li>
+      </ul>
+      <button class="mode-toggle" id="modeToggle">🌙</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="profile-card">
+        <img
+          src="images/iit-esummit.jpeg"
+          alt="Jothi's Photo"
+          class="profile-img"
+        />
+        <h2 class="name">Jothi Prakasam R</h2>
+        <p class="role">Cybersecurity and Container Enthusiast</p>
+        <p class="company">Student at Sri Sairam Institute of Technology</p>
+        <div class="social-icons">
+          <a
+            href="www.linkedin.com/in/jothiprakasam001
+            target="_blank"
+"
+            ><img src="icons/LinkedIN_white.svg" alt="LinkedIn"
+          /></a>
+          <a href="https://github.com/jothiprakasam/"
+            target="_blank"><img src="icons/Github_white.svg" alt="GitHub"
+          /></a>
+          <a href="https://medium.com/@jothiprakasam.r"
+           target="_blank" ><img src="icons/Medium_white.svg" alt="Medium"
+          /></a>
+          <a href="mailto:jothiprakasam.r@outlook.com" target="_blank">
+            <img src="icons/mail.svg" alt="Email JOTHI" />
+          </a>
+        </div>
+      </div>
+
+      <div class="bio">
+        <h1>Biography</h1>
+        <p>
+          Hi, I’m Jothi Prakasam. I am a third-year Computer Science student
+          with hands-on experience in cybersecurity and DevOps, backend Development in NodeJs, ExpressJs. I write blogs on
+          Medium and Reddit, focusing on technology and software.
+        </p>
+        <p>
+          In cybersecurity, I identify system vulnerabilities and simulate
+          real-world attack scenarios to improve security. In DevOps, I have
+          practical skills in Docker, Kubernetes, and managing both VMs and
+          containers for deployment and scaling.
+        </p>
+        <p>
+          Beyond my technical skills, I won multiple events, participated in
+          hackathons, and contributed to the IEEE Society. I want to build a
+          career in either the DevOps or cybersecurity field.
+        </p>
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+      <h1 class="section-title">Skills</h1>
+      <div class="skills-container">
+        <!-- Cybersecurity -->
+        <div class="skill-card">
+          <img
+            src="icons/security.svg"
+            alt="Cybersecurity Icon"
+            class="skill-icon"
+          />
+          <h3>Cybersecurity</h3>
+          <p>
+            Hands-on experience with Zap, Burpsuite and sonarqube, Semgrep for
+            Static code analysis
+          </p>
+        </div>
+        <!-- Docker & Kubernetes -->
+        <div class="skill-card">
+          <img src="icons/docker.svg" alt="Docker Icon" class="skill-icon" />
+          <img
+            src="icons/kubernetes.svg"
+            alt="Kubernetes Icon"
+            class="skill-icon"
+          />
+          <h3>Docker & Kubernetes</h3>
+          <p>
+            Containerizing applications and orchestrating deployments for
+            cloud-native environments.
+          </p>
+        </div>
+        <!-- Backend Development -->
+        <div class="skill-card">
+          <img src="icons/server.svg" alt="Backend Icon" class="skill-icon" />
+          <h3>Backend Development</h3>
+          <p>
+            Building robust and scalable server-side applications using Node.js,
+            Python, and REST APIs.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+      <h1 class="section-title">Experience</h1>
+      <div class="timeline">
+        <!-- Itech India Internship -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <img
+              src="icons/itech.png"
+              alt="Itech India Logo"
+              class="company-logo"
+            />
+            <div class="text-content">
+              <p class="position">Cybersecurity Intern</p>
+              <p class="company">itech India</p>
+              <p class="duration">
+                March 2025 – August 2025 • 90 Days • On-Site
+              </p>
+              <p class="description">
+                Worked on backend development tasks, improving database queries,
+                optimizing APIs, and assisting in software deployment workflows.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accops Systems Internship -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <img
+              src="icons/accops.svg"
+              alt="Accops Logo"
+              class="company-logo"
+            />
+            <div class="text-content">
+              <p class="position">DevOps Intern</p>
+              <p class="company">Accops Systems</p>
+              <p class="duration">June 2025 – August 2025 • Remote</p>
+              <p class="description">
+                hands-on experience in containerization, orchestration, and
+                deployment automation using Docker and Kubernetes API's
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hackathons">
+      <h2 class="section-title">🏆 Hackathons</h2>
+
+      <div class="hackathon-container">
+        <!-- Hackathon 1 -->
+        <div class="hackathon-card">
+          <img
+            src="images/rv-univ.jpeg"
+            alt="Hackathon 1"
+            class="hackathon-img"
+          />
+          <div class="hackathon-content">
+            <h3 class="hackathon-name">Agronyx 2025</h3>
+            <p class="venue">
+              <strong>Venue:</strong> RV University - Bangalore
+            </p>
+            <p class="prize"><strong>Prize:</strong> 🥇 2nd Place - ₹10,000</p>
+            <p class="description">
+              Built an AI-powered DevOps tool to monitor the OS(windows+linux)
+              and VMs at scale. Our tool uses Peer-to-Peer node communication
+              for scale across VM.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hackathon 2 -->
+        <div class="hackathon-card">
+          <img
+            src="images/kerala.JPG"
+            alt="Hackathon 2"
+            class="hackathon-img"
+          />
+          <div class="hackathon-content">
+            <h3 class="hackathon-name">HackAtArch 2.0</h3>
+            <p class="venue">
+              <strong>Venue:</strong> Goverment engineering college - kerala
+            </p>
+            <p class="prize"><strong>Prize:</strong> 🥈 1st Place - ₹25,000</p>
+            <p class="description">
+              Developed a startup idea and built a prototype, pitched infront of
+              judges with proper business model, revenue forecasting.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hackathon 3 -->
+        <div class="hackathon-card">
+          <img
+            src="images/vit-track.jpeg"
+            alt="Hackathon 3"
+            class="hackathon-img"
+          />
+          <div class="hackathon-content">
+            <h3 class="hackathon-name">DevHouse</h3>
+            <p class="venue">
+              <strong>Venue:</strong> Vellore Insitute of Technology - Chennai
+            </p>
+            <p class="prize"><strong>Prize:</strong> Track winner - Orkes</p>
+            <p class="description">
+              Built a blockchain application for software package management and
+              it uses the Orkes conductor workflow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
